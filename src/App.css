@@ -1,0 +1,137 @@
+/* 🌟 Light Mode GDG UI Background (Darker Glow Version) */
+.gdg-bg {
+  position: fixed;
+  inset: 0;
+  background: #f5f5f5; /* slightly darker than pure white */
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* deeper blue blob */
+.gdg-bg::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: rgba(66, 133, 244, 0.45); /* darker richer blue */
+  border-radius: 50%;
+  filter: blur(90px); /* blended glow */
+  top: -40px;
+  left: -40px;
+  animation: float1 10s infinite alternate ease-in-out;
+}
+
+/* deeper red blob */
+.gdg-bg::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: rgba(219, 68, 55, 0.40); /* darker red */
+  border-radius: 50%;
+  filter: blur(90px);
+  bottom: -40px;
+  right: -40px;
+  animation: float2 10s infinite alternate ease-in-out;
+}
+
+/* darker yellow */
+.blob-yellow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(244, 180, 0, 0.38); /* deeper yellow */
+  border-radius: 50%;
+  filter: blur(80px);
+  top: 40%;
+  left: 60%;
+  animation: float3 9s infinite alternate ease-in-out;
+}
+
+/* darker green */
+.blob-green {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(15, 157, 88, 0.35); /* deeper green */
+  border-radius: 50%;
+  filter: blur(80px);
+  top: 63%;
+  left: 20%;
+  animation: float4 9s infinite alternate ease-in-out;
+}
+
+/* animations */
+@keyframes float1 {
+  from { transform: translateY(0); }
+  to { transform: translateY(22px); }
+}
+
+@keyframes float2 {
+  from { transform: translateY(0); }
+  to { transform: translateY(-22px); }
+}
+
+@keyframes float3 {
+  from { transform: translateX(0); }
+  to { transform: translateX(15px); }
+}
+
+@keyframes float4 {
+  from { transform: translateX(0); }
+  to { transform: translateX(-15px); }
+}
+
+
+.titles {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title{
+  display: flex;
+  align-items: center;
+  img{
+    width: 125px;
+    margin-right: 5px;
+  }
+}
+/* Main title */
+.title h1 {
+  
+  margin: 0;
+  font-size: 68px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #4285F4, #DB4437, #F4B400, #0F9D58);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+/* Event name */
+.event-name {
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #333;
+  opacity: 0.85;
+  line-height: 1.4;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Location */
+.location {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #555;
+  opacity: 0.8;
+}

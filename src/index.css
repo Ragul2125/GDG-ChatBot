@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    135deg,
+    #4285F4 0%,
+    #DB4437 25%,
+    #F4B400 50%,
+    #0F9D58 75%,
+    #4285F4 100%
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+  font-family: "Inter", sans-serif;
+}
+
+/* Smooth animated gradient */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
